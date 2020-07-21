@@ -1,0 +1,21 @@
+<h1>There are {{ count }} words in your text</h1>
+<br>
+<a href="{% url 'home' %}">Go back to the homepage</a>
+<br>
+<a href="{% url 'home' %} ">Start again</a>
+<br>
+<br>
+<a href="{% url 'Phones' %} ">Go to the Phones section</a>
+
+<h1>YOUR TEXT:</h1>
+{{ fulltext }}
+
+<h1>WORD COUNT:</h1>
+
+{% for word, wordcount in wdc %}
+
+{{ word }} --> {{ wordcount }}
+<br />
+
+{% endfor %}
+g
